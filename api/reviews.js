@@ -20,17 +20,19 @@ function clean(value, max) {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
 
-  // Works whatever prefix Vercel gave the token (BLOB_READ_WRITE_TOKEN, VCIL_REVIEWS_READ_WRITE_TOKEN, ...)
+  // Older stores: works whatever prefix Vercel gave the token (BLOB_READ_WRITE_TOKEN, VCIL_REVIEWS_READ_WRITE_TOKEN, ...)
   const tokenKey = process.env.BLOB_READ_WRITE_TOKEN ? "BLOB_READ_WRITE_TOKEN"
     : Object.keys(process.env).find((k) => /READ_WRITE_TOKEN$/.test(k) && /^vercel_blob_rw_/.test(process.env[k] || ""));
   const token = tokenKey ? process.env[tokenKey] : "";
-  if (!token) {
+  // New Vercel Blob stores connect without a token (OIDC): Vercel only adds BLOB_STORE_ID and the SDK signs in by itself
+  const auth = token ? { token } : {};
+  if (!token && !process.env.BLOB_STORE_ID) {
     return res.status(503).json({ error: "Reviews are not switched on yet. Please try again soon." });
   }
 
   try {
     if (req.method === "GET") {
-      const { blobs } = await list({ prefix: "reviews/data/", limit: 1000, token });
+      const { blobs } = await list({ prefix: "reviews/data/", limit: 1000, ...auth });
       blobs.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
       const latest = blobs.slice(0, MAX_REVIEWS);
       const reviews = (await Promise.all(latest.map(async (b) => {
@@ -67,12 +69,12 @@ export default async function handler(req, res) {
         const buf = Buffer.from(m[2], "base64");
         if (buf.length > MAX_PHOTO_BYTES) return res.status(400).json({ error: "That photo is too large. Please choose a smaller one." });
         const ext = m[1] === "jpeg" ? "jpg" : m[1];
-        const up = await put(`reviews/photos/${id}.${ext}`, buf, { access: "public", contentType: `image/${m[1]}`, addRandomSuffix: true, token });
+        const up = await put(`reviews/photos/${id}.${ext}`, buf, { access: "public", contentType: `image/${m[1]}`, addRandomSuffix: true, ...auth });
         photo = up.url;
       }
 
       const review = { id, name, rating, message, photo, date: new Date().toISOString() };
-      await put(`reviews/data/${id}.json`, JSON.stringify(review), { access: "public", contentType: "application/json", addRandomSuffix: true, token });
+      await put(`reviews/data/${id}.json`, JSON.stringify(review), { access: "public", contentType: "application/json", addRandomSuffix: true, ...auth });
       return res.status(201).json({ review });
     }
 
