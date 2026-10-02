@@ -990,6 +990,80 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
 .social-link:hover { filter: brightness(1.1); background-color: inherit; }
 .fab-top { bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px)); z-index: 70; }
 
+/* =====================================================================
+   DRAFT 8
+   ===================================================================== */
+/* Seven tabs */
+.nav-main a { padding: 0 clamp(.38rem, .55vw, .7rem); font-size: clamp(.98rem, 1.12vw, 1.15rem); }
+.nav-main a::after { left: .4rem; right: .4rem; }
+.tabbar.seven ul { width: 100%; max-width: 720px; padding: 0 .1rem; }
+.tabbar.seven a { font-size: clamp(.64rem, 2.75vw, .92rem); padding-left: 0; padding-right: 0; }
+.tabbar.seven a span { max-width: 5.6em; }
+.tabbar.seven svg { width: 21px; height: 21px; }
+
+/* Player Registration Form button */
+.reg-cta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; padding: clamp(1.1rem, 4vw, 1.6rem) clamp(1.1rem, 4vw, 1.8rem); border-radius: var(--r-l); background: linear-gradient(135deg, #E23A50, var(--red) 45%, var(--red-dark)); color: #fff; text-decoration: none; box-shadow: 0 16px 34px rgba(215, 38, 61, .35); min-height: 96px; }
+.reg-cta:hover { color: #fff; filter: brightness(1.06); }
+.reg-cta-ico { flex: none; width: 58px; height: 58px; border-radius: 50%; background: rgba(255, 255, 255, .18); display: grid; place-items: center; }
+.reg-cta-ico svg { width: 30px; height: 30px; }
+.reg-cta-txt { flex: 1; min-width: 0; }
+.reg-cta-txt strong { display: block; font-family: var(--font-display); font-size: clamp(1.7rem, 6vw, 2.4rem); font-weight: 800; text-transform: uppercase; line-height: 1; }
+.reg-cta-txt small { display: block; margin-top: .35rem; font-size: 1rem; opacity: .9; }
+.reg-cta-go { flex: none; font-size: 2.6rem; line-height: 1; }
+.team-only { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.3rem; padding: 1rem 1.1rem; border-radius: var(--r-m); border: 3px solid var(--red); background: #FFF4F5; }
+.team-only svg { width: 40px; height: 40px; color: var(--red); flex: none; }
+.team-only strong { display: block; font-family: var(--font-display); font-size: 1.45rem; color: var(--navy-700); line-height: 1.1; }
+.team-only small { color: var(--muted); }
+
+/* VCIL Shop catalogues */
+.pdf-card { display: grid; gap: 1.1rem; align-items: center; }
+.pdf-cover { display: block; width: min(100%, 260px); border-radius: var(--r-s); overflow: hidden; border: 3px solid var(--gold); background: #fff; box-shadow: var(--shadow); }
+.pdf-cover img { width: 100%; height: auto; }
+@media (min-width: 600px) { .pdf-card { grid-template-columns: 260px 1fr; } }
+#shop .shop-cta { margin-top: 1.4rem; }
+
+/* Sponsorship slogans */
+.slogan { margin: 1.4rem 0 0; padding: 1rem 0 0 1.1rem; border-left: 5px solid var(--gold); }
+.slogan p { margin: 0 0 .35rem; font-family: var(--font-display); font-size: clamp(1.35rem, 4.4vw, 1.8rem); font-weight: 700; line-height: 1.15; color: #fff; }
+.slogan p[lang="hi"] { font-family: var(--font-hi); font-size: clamp(1.15rem, 3.8vw, 1.45rem); font-weight: 600; color: var(--gold); }
+
+/* Partner strip message */
+.pw-message { gap: .8rem; }
+.pw-text { margin: 0; max-width: 24rem; font-weight: 600 !important; color: var(--ink) !important; font-size: 1rem; line-height: 1.45; }
+
+/* Social buttons */
+.btn-yt { background: linear-gradient(135deg, #FF0000 0%, #E00000 55%, #B30000 100%); color: #fff; }
+.btn-yt:hover { background: linear-gradient(135deg, #FF1A1A 0%, #CC0000 100%); color: #fff; }
+.btn-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; }
+
+/* Player reviews */
+.rv-summary { margin: 0 0 1rem; font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--gold); }
+.rv-status { color: var(--on-dark-muted); margin: 0 0 1.2rem; }
+.rv-feed { list-style: none; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); margin-bottom: 1rem; }
+.rv-card { padding: 1.1rem 1.2rem; border-top: 5px solid var(--gold); }
+.rv-head { display: flex; gap: .9rem; align-items: center; margin-bottom: .7rem; }
+.rv-photo { flex: none; width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); background: var(--navy-700); }
+.rv-initials { display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; }
+.rv-who strong { display: block; font-family: var(--font-display); font-size: 1.35rem; color: var(--navy-700); line-height: 1.1; }
+.rv-stars { display: block; color: #E8A317; font-size: 1.15rem; letter-spacing: .08em; }
+.rv-who small { color: var(--muted); }
+.rv-text { margin: 0; white-space: pre-line; color: var(--ink); }
+#rv-more { margin-bottom: 1rem; }
+#write-review { margin-top: .5rem; }
+.stars { display: inline-flex; flex-direction: row-reverse; gap: .2rem; }
+.stars input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.stars label { cursor: pointer; font-size: 2.6rem; line-height: 1; color: #C8D1E2; padding: 0 .1rem; transition: color .15s; }
+.stars label:hover, .stars label:hover ~ label, .stars input:checked ~ label { color: #E8A317; }
+.stars input:focus-visible + label { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.rv-preview { width: 96px; height: 96px; object-fit: cover; border-radius: var(--r-s); margin-top: .5rem; border: 2px solid var(--line); }
+.field input[type="file"] { padding: .55rem; min-height: 0; }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+#rv-submit:disabled { opacity: .7; cursor: wait; }
+.tabbar.seven ul { overflow-x: auto; scrollbar-width: none; justify-content: space-between; }
+.tabbar.seven ul::-webkit-scrollbar { display: none; }
+.tabbar.seven li { flex: 1 0 auto; }
+.tabbar.seven a { padding: .5rem .18rem .45rem; }
+
 .seam { width: 165px; height: 35px; background-size: 165px 35px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='132' height='28' viewBox='0 0 132 28'%3E%3Cg transform='rotate(35 24 14)'%3E%3Crect x='20' y='5' width='9' height='18' rx='2.5' fill='%23F0B429'/%3E%3Crect x='23' y='0' width='3' height='7' rx='1.2' fill='%23fff'/%3E%3C/g%3E%3Ccircle cx='66' cy='14' r='10' fill='%23D7263D'/%3E%3Cpath d='M59 6c3.5 5 3.5 11 0 16M73 6c-3.5 5-3.5 11 0 16' stroke='%23fff' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3Cg stroke='%23fff' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M100 7v19M108 7v19M116 7v19'/%3E%3C/g%3E%3Cpath d='M98.5 5h19' stroke='%23F0B429' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left center / 165px 35px; }
 </style>
 </head>
@@ -1056,6 +1130,7 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
         <li><a href="#gallery" data-tab="gallery">Gallery</a></li>
         <li><a href="#contact" data-tab="contact">Contact Us</a></li>
         <li><a href="#register" data-tab="register">Registration &amp; Fees</a></li>
+        <li><a href="#shop" data-tab="shop">VCIL Shop</a></li>
         <li><a href="#pride" data-tab="pride">Our Pride</a></li>
       </ul>
     </nav>
@@ -1063,13 +1138,14 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
 </header>
 
 <!-- Phones and tablets: the same six tabs in a bar that stays at the top -->
-<nav class="tabbar" aria-label="Main">
+<nav class="tabbar seven" aria-label="Main">
   <ul>
     <li><a href="#tournament" data-tab="tournament"><svg aria-hidden="true"><use href="#t-cup"/></svg><span>Tournament</span></a></li>
     <li><a href="#sponsorship" data-tab="sponsorship"><svg aria-hidden="true"><use href="#t-hand"/></svg><span>Sponsorship</span></a></li>
     <li><a href="#gallery" data-tab="gallery"><svg aria-hidden="true"><use href="#t-cam"/></svg><span>Gallery</span></a></li>
     <li><a href="#contact" data-tab="contact"><svg aria-hidden="true"><use href="#t-contact"/></svg><span>Contact Us</span></a></li>
     <li><a href="#register" data-tab="register"><svg aria-hidden="true"><use href="#t-form"/></svg><span>Registration &amp; Fees</span></a></li>
+    <li><a href="#shop" data-tab="shop"><svg aria-hidden="true"><use href="#i-shirt"/></svg><span>VCIL Shop</span></a></li>
     <li><a href="#pride" data-tab="pride"><svg aria-hidden="true"><use href="#t-star"/></svg><span>Our Pride</span></a></li>
   </ul>
 </nav>
@@ -1245,6 +1321,7 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
         <a href="#schedule">Fixtures</a>
         <a href="#teams">Teams &amp; captains</a>
         <a href="#rules">Rules</a>
+        <a href="#reviews">Player reviews</a>
       </nav>
     </div>
   </header>
@@ -1266,9 +1343,8 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
             </dl>
             <p class="event-extra">Every match live on YouTube with two cameras</p>
             <div class="btn-row">
-              <a class="btn btn-red" href="#" data-action="gform" data-form="t20" hidden>Register (Google Form)</a>
               <a class="btn btn-outline" href="#sched-nov">Fixtures</a>
-              <a class="btn btn-outline" href="#fees">Fees &amp; what's included</a>
+              <a class="btn btn-outline" href="#fees">What's included</a>
               <a class="btn btn-outline" href="documents/rules-50plus-t20.pdf" target="_blank" rel="noopener">Rules (PDF)</a>
             </div>
           </div>
@@ -1285,8 +1361,8 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
             </dl>
             <p class="event-extra"><strong>19 December:</strong> One-day local Jaipur city tour. Entry fees, tolls and food on the tour are self-paid.</p>
             <div class="btn-row">
-              <a class="btn btn-red" href="#" data-action="gform" data-form="dec">Register (Google Form)</a>
-              <a class="btn btn-outline" href="#fees">Fees &amp; what's included</a>
+              <a class="btn btn-red" href="#" data-action="gform" data-tour="dec">Player Registration Form</a>
+              <a class="btn btn-outline" href="#fees">What's included</a>
             </div>
           </div>
         </details>
@@ -1302,8 +1378,8 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
             </dl>
             <p class="event-extra"><strong>11 January:</strong> Local city tour. Enjoy with friends.</p>
             <div class="btn-row">
-              <a class="btn btn-red" href="#" data-action="gform" data-form="jan">Register (Google Form)</a>
-              <a class="btn btn-outline" href="#fees">Fees &amp; what's included</a>
+              <a class="btn btn-red" href="#" data-action="gform" data-tour="jan">Player Registration Form</a>
+              <a class="btn btn-outline" href="#fees">What's included</a>
               <a class="btn btn-outline" href="documents/rules-60plus-pink-ball.pdf" target="_blank" rel="noopener">Rules (PDF)</a>
             </div>
           </div>
@@ -1447,6 +1523,54 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
       </div>
     </div>
   </div>
+
+  <!-- Player reviews (stored online through /api/reviews) -->
+  <div class="block" id="reviews">
+    <div class="wrap">
+      <div class="block-head"><div><h2>Player Reviews</h2><span class="seam" aria-hidden="true"></span><p>What our players say about VCIL. Played with us? Share your experience.</p></div></div>
+      <p class="rv-summary" id="rv-summary" hidden></p>
+      <ul class="rv-feed" id="rv-feed" aria-live="polite"></ul>
+      <p class="rv-status" id="rv-status">Loading reviews&hellip;</p>
+      <button class="btn btn-ghost" type="button" id="rv-more" hidden>Show more reviews</button>
+
+      <details class="acc card" id="write-review">
+        <summary><span class="sum-text">Write a review<small>Your name, a star rating, your review and a photo</small></span></summary>
+        <div class="acc-body">
+          <form id="rv-form" novalidate>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="rv-name">Player name</label>
+                <input id="rv-name" name="name" type="text" maxlength="60" autocomplete="name" required>
+              </div>
+              <fieldset class="field full">
+                <legend>Star rating</legend>
+                <div class="stars" id="rv-stars">
+                  <input type="radio" id="rv-s5" name="rating" value="5"><label for="rv-s5" title="5 stars"><span class="visually-hidden">5 stars</span>&#9733;</label>
+                  <input type="radio" id="rv-s4" name="rating" value="4"><label for="rv-s4" title="4 stars"><span class="visually-hidden">4 stars</span>&#9733;</label>
+                  <input type="radio" id="rv-s3" name="rating" value="3"><label for="rv-s3" title="3 stars"><span class="visually-hidden">3 stars</span>&#9733;</label>
+                  <input type="radio" id="rv-s2" name="rating" value="2"><label for="rv-s2" title="2 stars"><span class="visually-hidden">2 stars</span>&#9733;</label>
+                  <input type="radio" id="rv-s1" name="rating" value="1"><label for="rv-s1" title="1 star"><span class="visually-hidden">1 star</span>&#9733;</label>
+                </div>
+              </fieldset>
+              <div class="field full">
+                <label for="rv-message">Your review</label>
+                <textarea id="rv-message" name="message" maxlength="800" required></textarea>
+                <span class="hint" id="rv-count">0 / 800</span>
+              </div>
+              <div class="field full">
+                <label for="rv-photo">Your photo <span class="hint">(optional, JPG or PNG)</span></label>
+                <input id="rv-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp">
+                <img class="rv-preview" id="rv-preview" alt="" hidden>
+              </div>
+              <div class="hp" aria-hidden="true"><label for="rv-website">Leave this empty</label><input id="rv-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <p class="form-msg full" id="rv-msg" role="alert"></p>
+              <div class="full"><button class="btn btn-red btn-block" type="submit" id="rv-submit">Submit review</button></div>
+            </div>
+          </form>
+        </div>
+      </details>
+    </div>
+  </div>
 </section>
 
 <!-- #####################################################################
@@ -1457,13 +1581,12 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
     <div class="wrap">
       <p class="crumbs"><a href="#home">Home</a><span aria-hidden="true">/</span><span>Registration &amp; Fees</span></p>
       <h1 id="register-title">Registration &amp; Fees</h1>
-      <p class="lead">Each tournament has its own Google Form. Registration is free for the first year; the fees are for team entry and matches.</p>
+      <p class="lead">Register with the Player Registration Form. Registration is free for the first year.</p>
       <nav class="subnav" aria-label="On this page">
         <a href="#how-to-register">How to register</a>
-        <a href="#fees">Fees &amp; what's included</a>
+        <a href="#fees">What's included</a>
         <a href="#payment">Payment details</a>
         <a href="#quick-register">Quick registration</a>
-        <a href="#shop">VCIL Shop</a>
       </nav>
     </div>
   </header>
@@ -1472,25 +1595,23 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
     <div class="wrap">
       <div class="notice"><strong>50+ T20 Season 1 (November):</strong> registration is closed. All registrations are done.</div>
       <ol class="steps">
-        <li><div><strong>Open the Google Form</strong><span>Choose the form for your tournament below. Upload your ID card inside the form.</span></div></li>
+        <li><div><strong>Open the Player Registration Form</strong><span>Tap the red button below. Upload your ID card inside the form.</span></div></li>
         <li><div><strong>Fill in your details</strong><span>Complete the form and send it.</span></div></li>
         <li><div><strong>Get confirmation from VCIL</strong><span>Our team sends you an approval message on WhatsApp with the fee payment details. Please pay only after approval.</span></div></li>
       </ol>
-      <div class="gform-band glass">
-        <div>
-          <h3>Register on Google Form</h3>
-          <p>Choose your tournament. The form opens in a new tab.</p>
-        </div>
-        <!-- One button per tournament that is open, built from the TOURNAMENTS list -->
-        <div class="btn-row" id="gform-btns"></div>
-      </div>
+      <a class="reg-cta" href="#" data-action="gform">
+        <span class="reg-cta-ico" aria-hidden="true"><svg><use href="#t-form"/></svg></span>
+        <span class="reg-cta-txt"><strong>Player Registration Form</strong><small>Opens the Google Form in a new tab</small></span>
+        <span class="reg-cta-go" aria-hidden="true">&rsaquo;</span>
+      </a>
+</div>
     </div>
   </div>
 
   <div class="block">
     <div class="wrap">
       <details class="acc glass big-acc" id="fees">
-        <summary><span class="sum-text">Fees &amp; What's Included<small>Team entry, player fees and what each tournament includes</small></span></summary>
+        <summary><span class="sum-text">What's Included<small>What each tournament includes</small></span></summary>
         <div class="acc-body">
           <!-- The fee cards are built from the TOURNAMENTS list in the EDIT HERE area at the bottom of this file -->
           <div class="fee-grid" id="fee-grid"></div>
@@ -1522,27 +1643,24 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
   <div class="block">
     <div class="wrap">
       <details class="acc glass big-acc" id="quick-register">
-        <summary><span class="sum-text">Quick Registration<small>Register on WhatsApp as a team or as an individual player</small></span></summary>
+        <summary><span class="sum-text">Quick Registration<small>Register your team on WhatsApp</small></span></summary>
         <div class="acc-body">
       <p class="qr-intro">Choose an option, fill this in, and WhatsApp opens with your details typed in.</p>
       <form class="card quick-form" id="reg-form" novalidate>
-        <fieldset class="reg-type">
-          <legend class="visually-hidden">I'm registering</legend>
-          <label class="type-opt"><input type="radio" name="type" value="As a Team" checked><span><svg aria-hidden="true"><use href="#t-players"/></svg><strong>As a Team</strong><small>Register your whole team</small></span></label>
-          <label class="type-opt"><input type="radio" name="type" value="As an Individual Player"><span><svg aria-hidden="true"><use href="#t-star"/></svg><strong>As an Individual Player</strong><small>Join as one player</small></span></label>
-        </fieldset>
+        <input type="hidden" name="type" value="As a Team">
+        <div class="team-only"><svg aria-hidden="true"><use href="#t-players"/></svg><span><strong>As a Team</strong><small>Register your whole team</small></span></div>
         <div class="form-grid">
           <div class="field full">
             <label for="r-event">Tournament</label>
             <!-- Only tournaments that are open for registration appear here (set in the TOURNAMENTS list) -->
             <select id="r-event" name="event"></select>
           </div>
-          <div class="field full" data-for="team">
+          <div class="field full">
             <label for="r-team">Team name <span class="hint">(if you have one)</span></label>
             <input id="r-team" name="team" type="text" autocomplete="organization">
           </div>
           <div class="field full">
-            <label for="r-name">Your full name</label>
+            <label for="r-name">Your name (captain or manager)</label>
             <input id="r-name" name="fullname" type="text" autocomplete="name" required>
           </div>
           <fieldset class="field full">
@@ -1556,35 +1674,6 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
           <div class="field full">
             <label for="r-place">Place</label>
             <input id="r-place" name="place" type="text" autocomplete="address-level2">
-          </div>
-          <div class="field full" data-for="player" hidden>
-            <label for="r-role">Choose the one you specialise in</label>
-            <select id="r-role" name="role">
-              <option value="">Choose one</option>
-              <option>Batsman</option>
-              <option>Bowler</option>
-              <option>All-rounder</option>
-              <option>Wicketkeeper</option>
-            </select>
-          </div>
-          <div class="field full" data-for="bat" hidden>
-            <label for="r-bat">What kind of batsman are you?</label>
-            <select id="r-bat" name="bat">
-              <option value="">Choose one</option>
-              <option>Top-order batsman (1&ndash;4)</option>
-              <option>Middle-order batsman (5&ndash;8)</option>
-              <option>Lower-order batsman (9&ndash;11)</option>
-            </select>
-          </div>
-          <div class="field full" data-for="bowl" hidden>
-            <label for="r-bowl">What kind of bowler are you?</label>
-            <select id="r-bowl" name="bowl">
-              <option value="">Choose one</option>
-              <option>Pace bowler, right arm</option>
-              <option>Pace bowler, left arm</option>
-              <option>Spin bowler, right arm</option>
-              <option>Spin bowler, left arm</option>
-            </select>
           </div>
           <div class="field">
             <label for="r-phone">Phone number</label>
@@ -1611,19 +1700,65 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
     </div>
   </div>
 
-  <div class="block" id="shop">
+</section>
+
+<!-- #####################################################################
+     TAB: VCIL SHOP (the three catalogue PDFs)
+     ##################################################################### -->
+<section class="page" id="shop" data-title="VCIL Shop" aria-labelledby="shop-title">
+  <header class="page-hero" style="--hero-img:url('images/hero-2.jpg')">
     <div class="wrap">
-      <div class="block-head"><div><h2>VCIL Shop &amp; Custom Team Apparel</h2><span class="seam" aria-hidden="true"></span><p>Order customized, high-quality sublimation cricket apparel designed for performance and comfort.</p></div></div>
-      <ul class="shop-grid">
-        <li class="shop-item card"><span class="shop-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 6 7 12l4 9 4-2v23h18V19l4 2 4-9-10-6c-1 3.5-4 6-7 6s-6-2.5-7-6Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M15 26h18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><h3>Sublimation T-Shirts &amp; Team Jerseys</h3></li>
-        <li class="shop-item card"><span class="shop-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 5h20l3 38h-9l-4-24-4 24h-9Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M14 11h20" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><h3>Team Lowers &amp; Track Pants</h3></li>
-        <li class="shop-item card"><span class="shop-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 30c0-11 7-19 16-19s16 8 16 19Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M8 30h36c2 0 2 4-1 4H8M24 11V8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><h3>Customized Cricket Caps</h3></li>
-        <li class="shop-item card"><span class="shop-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 5l-7 5v32h11V22M31 5l7 5v32H27V22M17 5c1 5 3 9 7 12 4-3 6-7 7-12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 17v25" stroke="currentColor" stroke-width="2.6"/></svg></span><h3>Half Jackets</h3></li>
-        <li class="shop-item card"><span class="shop-ico" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 5 6 11l-2 27h7l2-17v22h22V21l2 17h7l-2-27-11-6c-1 4-3.5 6-7 6s-6-2-7-6Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 11v32M16 24l3 2M32 24l-3 2" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><h3>Windcheaters</h3></li>
-      </ul>
+      <p class="crumbs"><a href="#home">Home</a><span aria-hidden="true">/</span><span>VCIL Shop</span></p>
+      <h1 id="shop-title">VCIL Shop</h1>
+      <p class="lead">Order customized, high-quality sublimation cricket apparel designed for performance and comfort.</p>
+    </div>
+  </header>
+
+  <div class="block" id="catalogues">
+    <div class="wrap">
+      <div class="block-head"><div><h2>Design Catalogues</h2><span class="seam" aria-hidden="true"></span><p>Tap a catalogue to open it. Note the design number you like and send it to us on WhatsApp.</p></div></div>
+      <div class="acc-tools"><button class="acc-all" type="button" data-acc-all>Open all</button></div>
+      <div class="acc-list">
+        <details class="acc glass">
+          <summary><span class="sum-text">Jersey Designs No. 01&ndash;50<small>Half sleeve &middot; PDF, 50 pages, 11.4 MB</small></span></summary>
+          <div class="acc-body">
+            <div class="pdf-card">
+              <a class="pdf-cover" href="documents/catalogue-jersey-designs-1-50.pdf" target="_blank" rel="noopener"><img src="images/cover-jerseys-1-50.jpg" alt="First page of the jersey designs 01 to 50 catalogue" loading="lazy" width="440" height="440"></a>
+              <div class="btn-row">
+                <a class="btn btn-red" href="documents/catalogue-jersey-designs-1-50.pdf" target="_blank" rel="noopener">Open catalogue</a>
+                <a class="btn btn-ghost" href="documents/catalogue-jersey-designs-1-50.pdf" download="VCIL-Jersey-Designs-01-50.pdf">Download</a>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="acc glass">
+          <summary><span class="sum-text">Jersey Designs No. 151&ndash;200<small>Full sleeve &middot; PDF, 50 pages, 5.4 MB</small></span></summary>
+          <div class="acc-body">
+            <div class="pdf-card">
+              <a class="pdf-cover" href="documents/catalogue-jersey-designs-151-200.pdf" target="_blank" rel="noopener"><img src="images/cover-jerseys-151-200.jpg" alt="First page of the jersey designs 151 to 200 catalogue" loading="lazy" width="425" height="425"></a>
+              <div class="btn-row">
+                <a class="btn btn-red" href="documents/catalogue-jersey-designs-151-200.pdf" target="_blank" rel="noopener">Open catalogue</a>
+                <a class="btn btn-ghost" href="documents/catalogue-jersey-designs-151-200.pdf" download="VCIL-Jersey-Designs-151-200.pdf">Download</a>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="acc glass">
+          <summary><span class="sum-text">Tracksuit Designs<small>PDF, 79 pages, 3.7 MB</small></span></summary>
+          <div class="acc-body">
+            <div class="pdf-card">
+              <a class="pdf-cover" href="documents/catalogue-tracksuit-designs.pdf" target="_blank" rel="noopener"><img src="images/cover-tracksuits.jpg" alt="First page of the tracksuit designs catalogue" loading="lazy" width="331" height="468"></a>
+              <div class="btn-row">
+                <a class="btn btn-red" href="documents/catalogue-tracksuit-designs.pdf" target="_blank" rel="noopener">Open catalogue</a>
+                <a class="btn btn-ghost" href="documents/catalogue-tracksuit-designs.pdf" download="VCIL-Tracksuit-Designs.pdf">Download</a>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
       <div class="shop-cta glass">
         <p>Custom designs available for all teams. Contact league organizers to place custom merchandise orders.</p>
-        <a class="btn btn-wa" href="#" data-action="whatsapp" data-msg="Hello VCIL, I'd like to order custom team apparel. Team name: ___ Items: ___ Number of pieces: ___"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+        <a class="btn btn-wa" href="#" data-action="whatsapp" data-msg="Hello VCIL, I'd like to order team apparel. Catalogue: ___ Design number: ___ Number of pieces: ___"><svg aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -1688,6 +1823,10 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
         <h2>Become a Partner</h2>
         <p class="become-sub">Come join a mission for a cause. Let's support veterans and become our partners.</p>
         <div class="btn-row"><button class="btn btn-red" type="button" data-open-sponsor>Sponsorship enquiry</button></div>
+        <blockquote class="slogan">
+          <p lang="hi">&ldquo;जिन्होंने बच्चों को खेलते देखा, अब बच्चे उन्हें खेलते देखें।&rdquo;</p>
+          <p>&ldquo;Those who watched their children play, now let their children watch them play.&rdquo;</p>
+        </blockquote>
       </div>
       <details class="acc glass" style="margin-top:1rem">
         <summary><span class="sum-text">Partner packages<small>Packages, and why partner with VCIL</small></span></summary>
@@ -1808,11 +1947,6 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
     <div class="wrap">
       <ul class="contact-grid">
         <li class="contact-card card">
-          <h3>Phone</h3>
-          <p class="value" data-fill="phoneDisplay">To be announced</p>
-          <a class="btn btn-blue" href="#" data-action="call"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
-        </li>
-        <li class="contact-card card">
           <h3>WhatsApp</h3>
           <p class="value" data-fill="whatsappDisplay">To be announced</p>
           <a class="btn btn-wa" href="#" data-action="whatsapp" data-msg="Hello VCIL, I'd like to know more about the league."><svg aria-hidden="true"><use href="#i-wa"/></svg>Chat now</a>
@@ -1855,12 +1989,12 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
         <details class="acc card"><summary><span class="sum-text">I haven't played properly in years. Can I still join?</span></summary><div class="acc-body"><p>Yes. VCIL was built for players who put cricket aside for careers, families and responsibilities.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Is it casual or competitive?</span></summary><div class="acc-body"><p>Both. The cricket is competitive and fair, and it is played in the spirit of friendship, fitness and sportsmanship.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Which tournaments are coming up?</span></summary><div class="acc-body"><ul><li>50+ T20 Season 1: 13&ndash;15 November 2026, Soni Cricket Stadium and Ranveer Singh Cricket Ground, Jaipur (registration closed). See the <a href="#schedule">fixtures</a>.</li><li>50+ 40-Overs Pink Ball Tournament: 17&ndash;21 December 2026, Ranveer Singh Stadium and Adnok Cricket Stadium, Jaipur</li><li>60+ 40-Overs Pink Ball Tournament: 9&ndash;12 January 2027, Adnok Cricket Stadium, Soni Stadium and Anantam Cricket Stadium, Jaipur</li></ul></div></details>
-        <details class="acc card"><summary><span class="sum-text">How much does it cost to take part?</span></summary><div class="acc-body"><p>Registration is free for the first year. The fees are for team entry and matches, and what each fee includes is different for each tournament. See <a href="#fees">Fees &amp; what's included</a>.</p></div></details>
-        <details class="acc card"><summary><span class="sum-text">How do I register?</span></summary><div class="acc-body"><p>Open the Google Form for your tournament in <a href="#how-to-register">Registration &amp; Fees</a>, and upload your ID card inside the form. The VCIL team will send you an approval message with the fee payment details. You can also use the quick WhatsApp registration on the same page.</p></div></details>
+        <details class="acc card"><summary><span class="sum-text">How much does it cost to take part?</span></summary><div class="acc-body"><p>Registration is free for the first year. For team entry and player fees, message us on WhatsApp. What each tournament includes is listed under <a href="#fees">What's included</a>.</p></div></details>
+        <details class="acc card"><summary><span class="sum-text">How do I register?</span></summary><div class="acc-body"><p>Open the Player Registration Form in <a href="#how-to-register">Registration &amp; Fees</a>, and upload your ID card inside the form. The VCIL team will send you an approval message with the fee payment details. You can also use the quick WhatsApp registration on the same page.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Can my family watch the matches?</span></summary><div class="acc-body"><p>Yes. Matches are streamed live on our YouTube channel, <a href="https://www.youtube.com/@visioncricketindia" target="_blank" rel="noopener">visioncricketindia</a>, with two cameras.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Is there anything beyond the cricket?</span></summary><div class="acc-body"><p>Yes. There is a one-day local Jaipur city tour on 19 December during the 50+ 40-Overs Pink Ball Tournament (entry fees, tolls and food on the tour are self-paid), and a one-day local city tour on 11 January during the 60+ 40-Overs Pink Ball Tournament.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Where can I read the rules?</span></summary><div class="acc-body"><p>The <a href="#rules">Rules</a> section on the Tournament page has the PDFs. The rules are the same for the 50+ and 60+ formats, apart from the age category.</p></div></details>
-        <details class="acc card"><summary><span class="sum-text">Can we order jerseys and apparel for our team?</span></summary><div class="acc-body"><p>Yes. Sublimation T-shirts and jerseys, lowers and track pants, caps, half jackets and windcheaters are available with custom designs for all teams. See the <a href="#shop">VCIL Shop</a> or message us on WhatsApp on +91 86965 55777.</p></div></details>
+        <details class="acc card"><summary><span class="sum-text">Can we order jerseys and apparel for our team?</span></summary><div class="acc-body"><p>Yes. Custom designs are available for all teams. See the design catalogues in the <a href="#shop">VCIL Shop</a> and message us on WhatsApp on +91 86965 55777 with the design number.</p></div></details>
         <details class="acc card"><summary><span class="sum-text">Can my business sponsor VCIL?</span></summary><div class="acc-body"><p>Yes. We offer Title, Associate, Tournament, Team and Supporting Partner packages. See <a href="#become-partner">Become a Partner</a> on the Sponsorship page.</p></div></details>
       </div>
     </div>
@@ -1876,7 +2010,7 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
   <div class="wrap">
     <div class="pw-group"><h2>Official Apparel Partner</h2><img src="images/sponsor-meridian.png" alt="Meridian Planning and Creativity" loading="lazy"></div>
     <div class="pw-group"><h2>Advertising Partner</h2><button class="pw-logo-btn" type="button" data-open-xpress aria-label="Xpress Solar: see their offer"><img src="images/sponsor-xpress-solar.png" alt="Xpress Solar" loading="lazy"></button></div>
-    <div class="pw-group"><h2>Your brand here</h2><button class="pw-cta" type="button" data-open-sponsor>Become a VCIL partner</button></div>
+    <div class="pw-group pw-message"><h2 class="visually-hidden">Become a VCIL partner</h2><p class="pw-text">Young cricket gets big funding and many sponsors, but veterans struggle even to buy basic gear. VCIL gives them a national platform to play, stay fit, and chase their dreams again!</p><button class="pw-cta" type="button" data-open-sponsor>Become a VCIL partner</button></div>
   </div>
 </aside>
 
@@ -1898,6 +2032,7 @@ a.doc-card:hover { box-shadow: 0 0 0 3px var(--gold), var(--shadow); color: var(
           <li><a href="#tournament">Tournament</a></li>
           <li><a href="#schedule">Fixtures</a></li>
           <li><a href="#rules">Rules</a></li>
+          <li><a href="#reviews">Player Reviews</a></li>
           <li><a href="#register">Registration &amp; Fees</a></li>
           <li><a href="#pride">Our Pride</a></li>
           <li><a href="#sponsorship">Sponsorship</a></li>
@@ -2041,12 +2176,14 @@ var CONFIG = {
 
   registrationDeadline: "",
 
-  // Google Form for each tournament (the "form" in each tournament below says which one it uses)
-  forms: {
-    t20: "https://docs.google.com/forms/d/e/1FAIpQLSeeHQpraJAs4WrS4QVGPVAruuokMyAdQ_PgflaCD2W4J_SA5A/viewform?usp=publish-editor",
-    dec: "https://docs.google.com/forms/d/e/1FAIpQLSeD3tVVmohv2AR-PAMea0IHi9mvhM010B3AYl2QLko8NAQoxg/viewform?usp=publish-editor",
-    jan: "https://docs.google.com/forms/d/e/1FAIpQLSepAMs0PcAh2AJpc_0Z_58TwotPj3pwu_xJkLsH51jXlb5_kA/viewform?usp=publish-editor"
-  },
+  // The Player Registration Form (one Google Form for every tournament)
+  playerForm: "https://docs.google.com/forms/d/e/1FAIpQLSepAMs0PcAh2AJpc_0Z_58TwotPj3pwu_xJkLsH51jXlb5_kA/viewform?usp=publish-editor",
+
+  // Show team entry and player fees on the What's Included cards? (true = show, false = hide)
+  showFees: false,
+
+  // Where player reviews are saved and loaded (the api/reviews.js file)
+  reviewsApi: "/api/reviews",
 
   bankAccountName:   "Vision Cricket India League Pvt Ltd",
   bankName:          "",
@@ -2065,7 +2202,7 @@ var CONFIG = {
     {
       key: "t20", name: "50+ T20 Season 1", short: "50+ T20 (November)", dates: "13–15 November 2026",
       start: "2026-11-13T00:00:00+05:30", end: "2026-11-15T23:59:59+05:30", link: "#ev-nov", colour: "grey",
-      registrationOpen: false, form: "t20",
+      registrationOpen: false,
       teamFee: "₹31,000", playerFee: "₹14,500",
       includes: [
         "Stay in a 4-star hotel",
@@ -2075,22 +2212,27 @@ var CONFIG = {
         "Matches on the best grounds",
         "Matches live on YouTube with two cameras",
         "DRS / referral system for run-outs and stumpings",
-        "Physio available at the ground"
+        "Physio available at the ground",
+        "Trophies included",
+        "Social media promotion"
       ],
       pleaseNote: []
     },
     {
       key: "dec", name: "50+ 40-Overs Pink Ball Tournament", short: "50+ 40-Overs (December)", dates: "17–21 December 2026",
       start: "2026-12-17T00:00:00+05:30", end: "2026-12-21T23:59:59+05:30", link: "#ev-dec", colour: "pink",
-      registrationOpen: true, form: "dec",
+      registrationOpen: true,
       teamFee: "₹25,000", playerFee: "₹18,500",
       includes: [
         "Stay in a 3-star hotel",
         "Breakfast, lunch and dinner",
         "Transport (from hotel to ground and ground to hotel)",
+        "The best grounds",
         "Matches live on YouTube with two cameras",
         "DRS / referral system for run-outs and stumpings",
         "Physio available at the ground",
+        "Trophies included",
+        "Social media promotion",
         "One-day local Jaipur city tour"
       ],
       pleaseNote: [
@@ -2101,7 +2243,7 @@ var CONFIG = {
     {
       key: "jan", name: "60+ 40-Overs Pink Ball Tournament", short: "60+ 40-Overs (January)", dates: "9–12 January 2027",
       start: "2027-01-09T00:00:00+05:30", end: "2027-01-12T23:59:59+05:30", link: "#ev-jan", colour: "blue",
-      registrationOpen: true, form: "jan",
+      registrationOpen: true,
       teamFee: "₹11,000", playerFee: "₹21,000",
       includes: [
         "Stay in a 3-star hotel",
@@ -2111,9 +2253,15 @@ var CONFIG = {
         "Matches live on YouTube with two cameras",
         "DRS / referral system for run-outs and stumpings",
         "Physio available at the ground",
-        "One-day local city tour"
+        "Trophies included",
+        "Social media promotion",
+        "One-day local Jaipur city tour"
       ],
-      pleaseNote: ["The rules PDF is an older version. The dates on this page are the latest."]
+      pleaseNote: [
+        "Bring your own white T-shirt and lower. No T-shirts are provided by the organisers.",
+        "On the city tour, entry fees, tolls and food are self-paid.",
+        "The rules PDF is an older version. The dates on this page are the latest."
+      ]
     }
   ],
 
@@ -2155,10 +2303,16 @@ var PLAYERS = [
   },
   {
     "name": "Ratan Sharma",
-    "meta": "",
-    "photo": "",
-    "headline": "Details coming soon.",
-    "record": []
+    "meta": "Veteran cricketer",
+    "photo": "images/hof-ratan-sharma.jpg",
+    "headline": "Former Himachal Pradesh Ranji player",
+    "record": [
+      "Represented Himachal Pradesh in the Ranji Trophy (1982–84).",
+      "Created a Middlesex County League record in 1989 by taking 10 wickets in a match.",
+      "Took 9 wickets in the prestigious Kanga League at Shivaji Park Gymkhana, Mumbai.",
+      "Represented VCI in the 60+ World Cup, Chennai, 2022.",
+      "A passionate veteran cricketer who continues to inspire through his love and dedication to the game."
+    ]
   },
   {
     "name": "Ambey Arun Parwatkar",
@@ -2303,30 +2457,6 @@ var PLAYERS = [
       "Represented East Zone in the Vizzy Trophy, 1990–91 and 1992–93",
       "Represented Uttar Pradesh in the Ranji Trophy, 1997–98",
       "An experienced cricketer with representation at both zonal and Ranji Trophy levels."
-    ]
-  },
-  {
-    "name": "Susheel Puri",
-    "meta": "Kerala, batsman",
-    "photo": "images/hof-susheel-puri.jpg",
-    "headline": "Represented Kerala State and Mahatma Gandhi University",
-    "record": [
-      "Represented the Kerala State junior team in 1986",
-      "Represented Mahatma Gandhi University in 1989 and 1990",
-      "Brings valuable experience in junior state and university-level cricket.",
-      "An experienced cricketer with a strong background in Kerala junior cricket and university-level cricket."
-    ]
-  },
-  {
-    "name": "Sandeep Shinde",
-    "meta": "Nagpur, all-rounder",
-    "photo": "images/hof-sandeep-shinde.jpg",
-    "headline": "Represented India at the 2025 IMC Over-50s World Cup in Colombo",
-    "record": [
-      "Ranji Trophy: reserve player for Vidarbha in 1995–96 (not part of the final 15-member squad)",
-      "International: represented India at the 2025 IMC Over-50s World Cup held in Colombo, Sri Lanka, under Veterans Cricket India (VCI)",
-      "Junior cricket: represented Vidarbha and Central Zone in BCCI tournaments at junior level",
-      "Brings decades of experience across state, zonal, national and veterans' cricket."
     ]
   },
   {
@@ -2544,10 +2674,9 @@ var PLAYERS = [
     } else if (action === "email" && CONFIG.email) {
       el.href = mailLink("Enquiry about VCIL");
     } else if (action === "gform") {
-      var fk = el.getAttribute("data-form"), tour = CONFIG.tournaments.filter(function (t) { return t.form === fk; })[0];
-      var url = CONFIG.forms[fk];
-      var isOpen = tour && tour.registrationOpen && new Date(tour.end).getTime() >= Date.now();
-      el.hidden = !isOpen;
+      var tk = el.getAttribute("data-tour"), tour = tk && CONFIG.tournaments.filter(function (t) { return t.key === tk; })[0];
+      var url = CONFIG.playerForm;
+      if (tour) el.hidden = !(tour.registrationOpen && new Date(tour.end).getTime() >= Date.now());
       if (url) { el.href = url; el.target = "_blank"; el.rel = "noopener noreferrer"; }
       else {
         el.addEventListener("click", function (e) {
@@ -2600,14 +2729,14 @@ var PLAYERS = [
       if (!open) card.appendChild(el("span", "closed-badge", "Registration closed"));
       card.appendChild(el("h3", "", t.name));
       card.appendChild(el("p", "when", t.dates + ", Jaipur"));
-      [["Team entry", t.teamFee, ""], ["Player fee", t.playerFee, "per player"]].forEach(function (f) {
+      if (CONFIG.showFees) [["Team entry", t.teamFee, ""], ["Player fee", t.playerFee, "per player"]].forEach(function (f) {
         var line = el("div", "fee-line"); line.appendChild(el("span", "", f[0]));
         var st = el("strong", "", f[1] || "To be announced");
         if (f[2] && f[1]) st.appendChild(el("small", "", f[2]));
         line.appendChild(st); card.appendChild(line);
       });
-      if (t.instalments && t.instalments.length) card.appendChild(mini("Player fee instalments", t.instalments, true));
-      if (t.includes && t.includes.length) card.appendChild(mini("What's included", t.includes, open));
+      if (CONFIG.showFees && t.instalments && t.instalments.length) card.appendChild(mini("Player fee instalments", t.instalments, false));
+      if (t.includes && t.includes.length) card.appendChild(mini("What's included", t.includes, false));
       if (t.pleaseNote && t.pleaseNote.length) {
         var n = el("div", "please-note"); n.appendChild(el("p", "", "Please note"));
         var ul = el("ul"); t.pleaseNote.forEach(function (x) { ul.appendChild(el("li", "", x)); }); n.appendChild(ul);
@@ -2623,15 +2752,6 @@ var PLAYERS = [
     var openTours = CONFIG.tournaments.filter(function (t) { return t.registrationOpen && new Date(t.start).getTime() > Date.now(); });
     openTours.forEach(function (t) { evSelect.appendChild(el("option", "", t.name)); });
     evSelect.appendChild(el("option", "", "For future tournaments"));
-  }
-  var gBtns = $("#gform-btns");
-  if (gBtns) {
-    CONFIG.tournaments.filter(function (t) { return t.registrationOpen && new Date(t.end).getTime() >= Date.now() && CONFIG.forms[t.form]; })
-      .forEach(function (t, i) {
-        var a = el("a", "btn " + (i === 0 ? "btn-red" : "btn-white"), t.short || t.name);
-        a.href = CONFIG.forms[t.form]; a.target = "_blank"; a.rel = "noopener noreferrer";
-        gBtns.appendChild(a);
-      });
   }
 
   /* ---------- Tournament status, "Next up" strip and countdown ---------- */
@@ -2831,54 +2951,26 @@ var PLAYERS = [
     return items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
   }
 
-  /* ---------- Registration form -> WhatsApp ---------- */
+  /* ---------- Quick registration (teams) -> WhatsApp ---------- */
   var reg = $("#reg-form"), regMsg = $("#reg-msg");
-  function showFor(name, on) { $$('[data-for="' + name + '"]', reg).forEach(function (el) { el.hidden = !on; }); }
-  function syncReg() {
-    var team = val(reg, "type") === "As a Team", role = val(reg, "role");
-    showFor("team", team);
-    showFor("player", !team);
-    showFor("bat", !team && (role === "Batsman" || role === "All-rounder" || role === "Wicketkeeper"));
-    showFor("bowl", !team && (role === "Bowler" || role === "All-rounder"));
-  }
-  $$('input[name="type"]', reg).forEach(function (r) { r.addEventListener("change", syncReg); });
-  reg.elements.role.addEventListener("change", syncReg);
-  syncReg();
   reg.addEventListener("submit", function (e) {
     e.preventDefault();
     regMsg.textContent = "";
-    var team = val(reg, "type") === "As a Team", role = val(reg, "role");
     var name = val(reg, "fullname"), phone = val(reg, "phone"), cat = val(reg, "category"), missing = [], first = null;
-    if (!val(reg, "event")) { missing.push("a tournament that is open for registration"); first = first || reg.elements.event; }
-    if (!name) { missing.push("your name"); first = first || reg.elements.fullname; }
+    if (!name) { missing.push("your name"); first = reg.elements.fullname; }
     if (!phone) { missing.push("your phone number"); first = first || reg.elements.phone; }
     if (!cat) { missing.push("your category"); first = first || reg.querySelector('input[name="category"]'); }
-    if (!team) {
-      if (!role) { missing.push("what you specialise in"); first = first || reg.elements.role; }
-      if (!reg.elements.bat.closest(".field").hidden && !val(reg, "bat")) { missing.push("what kind of batsman you are"); first = first || reg.elements.bat; }
-      if (!reg.elements.bowl.closest(".field").hidden && !val(reg, "bowl")) { missing.push("what kind of bowler you are"); first = first || reg.elements.bowl; }
-    }
-    if (missing.length) {
-      regMsg.textContent = "Please add " + listMissing(missing) + ".";
-      if (first) first.focus();
-      return;
-    }
-    var lines = ["Hello VCIL, I'd like to register.", "", "Registering: " + val(reg, "type").replace(/^As an? /, ""), "Tournament: " + val(reg, "event")];
-    if (team && val(reg, "team")) lines.push("Team name: " + val(reg, "team"));
+    if (missing.length) { regMsg.textContent = "Please add " + listMissing(missing) + "."; if (first) first.focus(); return; }
+    var lines = ["Hello VCIL, I'd like to register a team.", "", "Tournament: " + val(reg, "event")];
+    if (val(reg, "team")) lines.push("Team name: " + val(reg, "team"));
     lines.push("Name: " + name, "Category: " + cat);
     if (val(reg, "place")) lines.push("Place: " + val(reg, "place"));
-    if (!team) {
-      lines.push("Speciality: " + role);
-      if (val(reg, "bat")) lines.push("Batting: " + val(reg, "bat"));
-      if (val(reg, "bowl")) lines.push("Bowling: " + val(reg, "bowl"));
-    }
     lines.push("Phone: " + phone);
     if (val(reg, "email")) lines.push("Email: " + val(reg, "email"));
     if (val(reg, "notes")) lines.push("Notes: " + val(reg, "notes"));
     var text = lines.join("\n");
     if (!openWhatsApp(text)) {
-      if (CONFIG.email) window.location.href = mailLink("VCIL registration: " + name, text);
-      else regMsg.textContent = "Online registration opens once our contact number is added.";
+      if (CONFIG.email) window.location.href = mailLink("VCIL team registration: " + name, text);
       return;
     }
     toast("WhatsApp opened. Tap send to finish registering.");
@@ -2923,6 +3015,96 @@ var PLAYERS = [
     $("#sponsor-thanks").focus();
     sForm.reset();
   });
+
+  /* ---------- Player reviews (saved online through /api/reviews) ---------- */
+  var rvFeed = $("#rv-feed"), rvStatus = $("#rv-status"), rvSummary = $("#rv-summary"), rvMore = $("#rv-more");
+  var rvForm = $("#rv-form"), rvMsg = $("#rv-msg"), rvSubmit = $("#rv-submit"), rvPhoto = $("#rv-photo"), rvPreview = $("#rv-preview");
+  var reviews = [], rvShown = 6, rvReady = false, rvPhotoData = null, rvBusy = false;
+  function starText(n) { return "\u2605\u2605\u2605\u2605\u2605".slice(0, n) + "\u2606\u2606\u2606\u2606\u2606".slice(0, 5 - n); }
+  function rvCard(r) {
+    var li = el("li", "rv-card card");
+    var head = el("div", "rv-head");
+    if (r.photo && /^https:\/\//.test(r.photo)) { var im = el("img", "rv-photo"); im.src = r.photo; im.alt = ""; im.loading = "lazy"; head.appendChild(im); }
+    else head.appendChild(el("span", "rv-photo rv-initials", (r.name || "?").split(" ").map(function (w) { return w[0]; }).slice(0, 2).join("").toUpperCase()));
+    var who = el("div", "rv-who"); who.appendChild(el("strong", "", r.name));
+    var st = el("span", "rv-stars", starText(Math.max(1, Math.min(5, r.rating | 0)))); st.setAttribute("aria-label", r.rating + " out of 5 stars"); who.appendChild(st);
+    if (r.date) who.appendChild(el("small", "", new Date(r.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })));
+    head.appendChild(who); li.appendChild(head);
+    li.appendChild(el("p", "rv-text", r.message));
+    return li;
+  }
+  function rvRender() {
+    rvFeed.textContent = "";
+    reviews.slice(0, rvShown).forEach(function (r) { rvFeed.appendChild(rvCard(r)); });
+    rvMore.hidden = reviews.length <= rvShown;
+    if (reviews.length) {
+      var avg = reviews.reduce(function (a, r) { return a + (r.rating | 0); }, 0) / reviews.length;
+      rvSummary.textContent = "\u2605 " + avg.toFixed(1) + " average from " + reviews.length + (reviews.length === 1 ? " review" : " reviews");
+      rvSummary.hidden = false; rvStatus.hidden = true;
+    } else {
+      rvSummary.hidden = true; rvStatus.hidden = false;
+      rvStatus.textContent = rvReady ? "No reviews yet. Be the first to write one." : "Reviews will appear here soon.";
+    }
+  }
+  function rvLoad() {
+    if (!rvFeed) return;
+    fetch(CONFIG.reviewsApi, { headers: { Accept: "application/json" } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) { reviews = (d.reviews || []).sort(function (a, b) { return new Date(b.date) - new Date(a.date); }); rvReady = true; rvRender(); })
+      .catch(function () { rvReady = false; rvRender(); });
+  }
+  if (rvFeed) {
+    rvMore.addEventListener("click", function () { rvShown += 6; rvRender(); });
+    $("#rv-message").addEventListener("input", function () { $("#rv-count").textContent = this.value.length + " / 800"; });
+    rvPhoto.addEventListener("change", function () {
+      rvPhotoData = null; rvPreview.hidden = true; rvMsg.textContent = "";
+      var f = rvPhoto.files && rvPhoto.files[0];
+      if (!f) return;
+      if (!/^image\/(jpeg|png|webp)$/.test(f.type)) { rvMsg.textContent = "Please choose a JPG or PNG photo."; rvPhoto.value = ""; return; }
+      if (f.size > 15 * 1024 * 1024) { rvMsg.textContent = "That photo is too large. Please choose one under 15 MB."; rvPhoto.value = ""; return; }
+      var reader = new FileReader();
+      reader.onload = function () {
+        var img = new Image();
+        img.onload = function () {
+          var max = 800, sc = Math.min(1, max / Math.max(img.width, img.height));
+          var cv = document.createElement("canvas"); cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+          cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
+          rvPhotoData = cv.toDataURL("image/jpeg", 0.82);
+          rvPreview.src = rvPhotoData; rvPreview.hidden = false;
+        };
+        img.onerror = function () { rvMsg.textContent = "That photo could not be read. Please try another one."; rvPhoto.value = ""; };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(f);
+    });
+    rvForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (rvBusy) return;
+      rvMsg.textContent = "";
+      var name = val(rvForm, "name"), message = val(rvForm, "message"), rating = parseInt(val(rvForm, "rating"), 10), missing = [];
+      if (!name) missing.push("your name");
+      if (!rating) missing.push("a star rating");
+      if (!message) missing.push("your review");
+      if (missing.length) { rvMsg.textContent = "Please add " + listMissing(missing) + "."; return; }
+      if (rvPhoto.files && rvPhoto.files[0] && !rvPhotoData) { rvMsg.textContent = "Your photo is still loading. Please wait a moment and try again."; return; }
+      rvBusy = true; rvSubmit.disabled = true; rvSubmit.textContent = "Sending\u2026";
+      fetch(CONFIG.reviewsApi, {
+        method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name: name, rating: rating, message: message, photo: rvPhotoData, website: val(rvForm, "website") })
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (d) { if (!r.ok) throw new Error(d.error || "Your review could not be sent. Please try again later."); return d; });
+      }).then(function (d) {
+        if (d.review) { reviews.unshift(d.review); rvReady = true; rvRender(); }
+        rvForm.reset(); rvPhotoData = null; rvPreview.hidden = true; $("#rv-count").textContent = "0 / 800";
+        $("#write-review").open = false;
+        toast("Thank you! Your review is now on the website.");
+        rvFeed.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      }).catch(function (err) {
+        rvMsg.textContent = (err && err.message && !/Failed to fetch|NetworkError|Load failed/i.test(err.message)) ? err.message : "Your review could not be sent. Please check your internet and try again.";
+      }).then(function () { rvBusy = false; rvSubmit.disabled = false; rvSubmit.textContent = "Submit review"; });
+    });
+    rvLoad();
+  }
 
   /* ---------- Xpress Solar offer pop-up ---------- */
   var xp = $("#xpress-dialog"), xpLast = null;
